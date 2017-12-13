@@ -16,10 +16,8 @@ devCt = pA.get_device_count()
 devArray = []
 for i in range(devCt):
     devArray.append(pA.get_device_info_by_index(i))
-
 for i, dev in enumerate(devArray):
     print("%d - %s" % (i, dev['name']))
-
 if len(sys.argv) < 3:
     input_device_read = input('Choose Input: ')
     output_device_read = input('Choose Output: ')
@@ -28,12 +26,10 @@ if len(sys.argv) < 3:
 else:
     input_device_index = int(sys.argv[1])
     output_device_index = int(sys.argv[2])
-
 print("Input: " + str(devArray[input_device_index]))
 print("Output: " + str(devArray[output_device_index]))
 
 #PyAudio setup
-
 pyAudioWidth = 2
 pyAudioChannels = 2
 pyAudioRate = 44100
